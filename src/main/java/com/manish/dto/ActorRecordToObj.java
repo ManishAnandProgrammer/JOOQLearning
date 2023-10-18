@@ -1,4 +1,4 @@
-package com.manish.dao;
+package com.manish.dto;
 
 import lombok.Getter;
 import lombok.ToString;

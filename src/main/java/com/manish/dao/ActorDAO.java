@@ -1,5 +1,7 @@
 package com.manish.dao;
 
+import com.manish.dto.ActorRecordToObj;
+import com.manish.dto.ActorWithExactFieldNames;
 import com.manish.utils.ConnectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.jooq.*;
