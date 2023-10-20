@@ -8,7 +8,8 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-.idea/sonarline/
+.idea/sonarlint/issuestore/*
+.idea/sonarlint/securityhotspotstore/*
 .idea/dataSources/
 *.iws
 *.iml

@@ -38,12 +38,17 @@ public class FilmDAO {
                 .from(DSL.table("film_actor"))
                 .where(DSL.field("actor_id").in(actorNameSelectCondition));
 
-        Result<Record2<Long, String>> record2s = dslContext.select(filmID, filmTitle)
+        SelectConditionStep<Record2<Long, String>> finalQuery = dslContext.select(filmID, filmTitle)
                 .from(DSL.table("film"))
-                .where(filmID.in(actorIDSelectionCondition))
-                .fetch();
+                .where(filmID.in(actorIDSelectionCondition));
 
-        record2s.forEach(System.out::println);
+        System.out.println(finalQuery.getSQL());
+        System.out.println(finalQuery.getBindValues());
+
+        Result<Record2<Long, String>> record2s = finalQuery.fetch();
+
+//        record2s.forEach(System.out::println);
+        System.out.println(record2s.size());
     }
 
 }
